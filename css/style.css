@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: #efefef;
+    text-align: center;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: "item1 item2 item3 button-container" "item4 item5 item6 button-container" "item7 item8 item9 button-container" "name name name name";    
+    height: 80vh;
+}
+
+header {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+}
+
+#item3 {
+    grid-area: item3;
+}
+
+#item4 {
+    grid-area: item4;
+}
+
+#item5 {
+    grid-area: item5;
+}
+
+#item6 {
+    grid-area: item6;
+}
+
+#item7 {
+    grid-area: item7;
+}
+
+#item8 {
+    grid-area: item8;
+}
+
+#item9 {
+    grid-area: item9;
+}
+
+.name {
+    grid-area: name;
+    margin-top: 10px;
+}
+
+
+
+.name {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+}
+
+button {
+    height: 3em;
+    width: 14em;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0px 7px #2b8ead;
+    background-color: #72c3dc;
+    color: white;
+    border-color: transparent;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.item {
+    font-size: 75px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.item > span {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top:50%;    
+}
+
+@media only screen and (max-width: 760px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "button-container" "item1" "item2" "item3"  "item4" "item5" "item6" "item7" "item8" "item9" "name";    
+        grid-gap:5px;
+    }
+
+    button {
+        width: 10em;
+    }
+
+    .item {
+        font-size: 15px;
+        text-align: center;
+        color: black;
+        position: relative;
+    }
+
+    .shuffle-btn {
+        width:50%;
+        float: left;
+        
+    }
+
+    .shuffle-btn > button {
+        float: right;
+    }
+
+    .sort-btn {
+        width:50%;
+        float: right;
+    }
+
+    .sort-btn > button {
+        float: left;
+    }
+
+    header {
+        background-color: #333333;
+        position: relative;
+        height: 60px;
+    }
+
+    header > div {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #button-container {
+        margin-bottom: 10px;
+    }
+}
